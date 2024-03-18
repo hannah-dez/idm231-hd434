@@ -10,6 +10,11 @@ h1{
     font-weight: bold;
 }
 
+button{
+    background-color: transparent;
+    border: 0px;
+}
+
 .heading{
     color:palevioletred;
     margin: 0 auto;
@@ -109,19 +114,35 @@ h1{
     transform: rotate(-5deg);
 }
 
+.hover{
+    transition: transform 0.2s ease;
+}
+.hover:hover{
+    transform: scale(1.1);
+}
+
 .card-header{
     display: flex;
     justify-content: center;
     margin: 0;
 }
-
+.esc-btn{
+    width: 2vw;
+    height: auto;
+    z-index: 5;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
 .bird-img{
     max-width: 15vw;
     margin: auto;
     display: flex;
     border-radius: 15px;
 }
-
+.cards{
+    display: none;
+}
 .owl{
     background-color:cadetblue;
     width: 25vw;
@@ -130,6 +151,11 @@ h1{
     padding:15px;
     border-radius: 25px;
     color: rgb(252, 245, 233);
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
 }
 
 .parrot{
@@ -139,6 +165,11 @@ h1{
     margin: 10px auto;
     padding:15px;
     border-radius: 25px;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .robin{
@@ -148,6 +179,11 @@ h1{
     margin: 10px auto;
     padding:15px;
     border-radius: 25px;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .warbler{
@@ -157,6 +193,11 @@ h1{
     margin: 10px auto;
     padding:15px;
     border-radius: 25px;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .nightingale{
@@ -166,6 +207,11 @@ h1{
     margin: 10px auto;
     padding:15px;
     border-radius: 25px;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .dove{
@@ -175,6 +221,11 @@ h1{
     margin: 10px auto;
     padding:15px;
     border-radius: 25px;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .eagle{
@@ -184,6 +235,11 @@ h1{
     margin: 10px auto;
     padding:15px;
     border-radius: 25px;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .kingfisher{
@@ -193,6 +249,11 @@ h1{
     margin: 10px auto;
     padding:15px;
     border-radius: 25px;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .hawk{
@@ -202,6 +263,11 @@ h1{
     margin: 10px auto;
     padding:15px;
     border-radius: 25px;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .swan{
@@ -211,6 +277,11 @@ h1{
     margin: 10px auto;
     padding:15px;
     border-radius: 25px;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .rooster{
@@ -221,6 +292,11 @@ h1{
     padding:15px;
     border-radius: 25px;
     color:blanchedalmond;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .raven{
@@ -231,6 +307,11 @@ h1{
     padding:15px;
     border-radius: 25px;
     color:blanchedalmond;
+    z-index: 999; 
+    position: fixed; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 p.raven{
