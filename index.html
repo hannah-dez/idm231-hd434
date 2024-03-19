@@ -8,6 +8,7 @@
 </head>
 <body>
     <header class="heading">
+        <button class="help-btn"><img src="./Content/help-egg.png" alt="help"></button>
         <h1>Bird-thday Watching</h1>
     </header>
     <main>
@@ -34,155 +35,153 @@
         <!--input???-->
         <form class="input">
             <label class="input-content" for="birthday" required>Birthday :</label>
-            <input id="birthday-input" type="date">
-            <input id="submit-btn" class="submit" type="submit" value="Submit">
+            <input id="birthdayInput" type="date" name="birthday" placeholder="birthday">
+            <button type="submit" id="submitbtn">Submit</button>
         </form>
-
-        <!--Audio-->
-        <audio id="owl-audio">
-            <source src="./Content/Owl_call.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="parrot-audio">
-            <source src="./Content/parrot_sound.mp3" type="audio/mpeg"/>
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="robin-audio">
-            <source src="./Content/robin_call.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="wilsons-audio">
-            <source src="./Content/wilsons-audio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="nightingale-audio">
-            <source src="./Content/Nightingale-sound.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="dove-audio">
-            <source src="./Content/dove_call.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="eagle-audio">
-            <source src="./Content/eagle_call.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio >
-        <audio id="kingfisher-audio">
-            <source src="./Content/kingfisher_call.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="hawk-audio">
-            <source src="./Content/hawk_sound.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="swan-audio">
-            <source src="./Content/swan_sound.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="rooster-audio">
-            <source src="./Content/Rooster_call.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="raven-audio">
-            <source src="./Content/Raven-sound.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-
+<!--Cards + audio-->
         <div class="cards owl">
             <h1 class="card-header">Owl</h1>
+            <audio id="owl-audio">
+                <source src="./Content/Owl_call.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/owl-img.jpg" class="bird-img">
-            <p>"These animals are quite formidable and have vision and hearing unmatched within the animal kingdom."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"These animals are quite formidable and have vision and hearing unmatched within the animal kingdom."</p>
+            <a class="light" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p> Generally tending to stay quiet and thoughtful in a conversation, people born under Owls are observant and miss few details. These people are also known to speak sparsely yet profoundly. They are known to be extremely intelligent and understanding.</p>
         </div>
         <div class="cards parrot">
             <h1 class="card-header">Parrot</h1>
+            <audio id="parrot-audio">
+                <source src="./Content/parrot_sound.mp3" type="audio/mpeg"/>
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/parrot-img.jpg" class="bird-img">
-            <p>"Parrots are wonderfully intelligent and there are over 350 types of them around the world."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"Parrots are wonderfully intelligent and there are over 350 types of them around the world."</p>
+            <a class="dark" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p>People born under Parrots have an excitement for life. They tend to see the magic in the world and have an extremely playful outlook on life. Though they tend to be goofballs, people born under the Parrot are exremely intelligent. You may also be inclined to social interactions and fun adventures.</p>
         </div>
         <div class="cards robin">
             <h1 class="card-header">Robin</h1>
+            <audio id="robin-audio">
+                <source src="./Content/robin_call.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/robin-img.jpg" class="bird-img">
-            <p>"The American robin is a migratory songbird. They are quite industrious. They roost in trees and eat berries in large flocks during the fall and winter."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"The American robin is a migratory songbird. They are quite industrious. They roost in trees and eat berries in large flocks during the fall and winter."</p>
+            <a class="dark" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p>People born under robins are incredibly loyal and hard working. They are incredibly strong and trustworthy, and place their trust in people sparingly.</p>
         </div>
         <div class="cards warbler">
             <h1 class="card-header">Wilsons</h1>
             <h1 class="card-header">Warbler</h1>
+            <audio id="wilsons-audio">
+                <source src="./Content/wilsons-audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/wilsons-img.jpg" class="bird-img">
-            <p>"Wilsons Warbler is a small warbler known for its songs and the black cap on its head. They migrate all around the United States."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"Wilsons Warbler is a small warbler known for its songs and the black cap on its head. They migrate all around the United States."</p>
+            <a class="dark" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p>Those born under Wilsons Warbler are extremely kind and generous. They love being a part of communities and hold high importance in their family relations.</p>
         </div>
         <div class="cards nightingale">
             <h1 class="card-header">Nightingale</h1>
+            <audio id="nightingale-audio">
+                <source src="./Content/Nightingale-sound.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/nightingale-img.jpg" class="bird-img">
-            <p>"Nightingale's have a rich and powerful song that they sing at night."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"Nightingale's have a rich and powerful song that they sing at night."</p>
+            <a  class="dark" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p>Those who are under the Nightingale are extremely empathetic. You naturally connect to those around you and bring kindness to every situation. They also cary an intense sense of dignity in all of their interactions.</p>
         </div>
         <div class="cards dove">
             <h1 class="card-header">Dove</h1>
+            <audio id="dove-audio">
+                <source src="./Content/dove_call.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/dove-img.jpg" class="bird-img">
-            <p>"The dove is known for many things such as its distinct “coo” sound. They also have expert navigation abilities- you could call them the GPS of the bird kingdom!"</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"The dove is known for many things such as its distinct “coo” sound. They also have expert navigation abilities- you could call them the GPS of the bird kingdom!"</p>
+            <a class="dark" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p>The dove is often onsidered a symbol of hope. People born under the dove prioritize balance, love, and peace within themselves and in their surrounding environment. They tend to like calm environments that aren'tfast paced. They have an innate desire to be helpful and provide for their loved ones.</p>
         </div>
         <div class="cards eagle">
             <h1 class="card-header">Eagle</h1>
+            <audio id="eagle-audio">
+                <source src="./Content/eagle_call.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio >
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/eagle-img.jpg" class="bird-img">
-            <p>"One of the worlds largest raptors, eagles can fly to over 10,000 feet. People born in this time frame soar high like the eagle."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"One of the worlds largest raptors, eagles can fly to over 10,000 feet. People born in this time frame soar high like the eagle."</p>
+            <a class="dark" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p>Those who are born under the Eagles time, are generally outspoken confident people. They have an extreme sense of self assurnce and will have no problem telling you how they feel. Often times Eagles are the ones to take initiative and follow through with their plans</p>
         </div>
         <div class="cards kingfisher">
             <h1 class="card-header">Kingfisher</h1>
+            <audio id="kingfisher-audio">
+                <source src="./Content/kingfisher_call.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/kingfisher-img.jpg" class="bird-img">
-            <p>"The Kingfisher is loud, brash, and hunts using its claws and bill."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"The Kingfisher is loud, brash, and hunts using its claws and bill."</p>
+            <a class="dark" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p>Kingfishers are not ones to hold back, when they think something you will know. They are also more emotionally closed off and harder to get close too. However, once you befriend a Kingfisher you will have their loyalty until the end.</p>
         </div>
         <div class="cards hawk">
             <h1 class="card-header">Hawk</h1>
+            <audio id="hawk-audio">
+                <source src="./Content/hawk_sound.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/hawk-img.jpg" class="bird-img">
-            <p>"There are many species of hawks, all having incredile eye sight. They are incredibly agile in flight and generally mate for life."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
-            <a> Those born under a Hawk have an incredible intuition about situations and people. They are incredibly adaptable to the various challenges they may face. Though Hawks value their independence they also are firecly protective of those they allow close to them.</a>
+            <p class="card-quote">"There are many species of hawks, all having incredile eye sight. They are incredibly agile in flight and generally mate for life."</p>
+            <a class="dark" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p> Those born under a Hawk have an incredible intuition about situations and people. They are incredibly adaptable to the various challenges they may face. Though Hawks value their independence they also are firecly protective of those they allow close to them.</p>
         </div>
         <div class="cards swan">
             <h1 class="card-header">Swan</h1>
+            <audio id="swan-audio">
+                <source src="./Content/swan_sound.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/swan-img.jpg" class="bird-img">
-            <p>"Swans are waterfowls that swim gracefully and form lifelong bonded pairs at around two to three years of age."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"Swans are waterfowls that swim gracefully and form lifelong bonded pairs at around two to three years of age."</p>
+            <a class="dark" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p>Swans are graceful in personality and behavior. They navigate social situations and discourse with ease and are natural compromisers. They work hard to find solutions where everyone can be happy. Swans are gentle and kind to their core.</p>
         </div>
         <div class="cards rooster">
             <h1 class="card-header">Rooster</h1>
+            <audio id="rooster-audio">
+                <source src="./Content/Rooster_call.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/rooster-img.jpg" class="bird-img">
-            <p>"Roosters have a strutting attitude to go with their feathers that are ususally in brighter colors than their companion hens, but not in every breed."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"Roosters have a strutting attitude to go with their feathers that are ususally in brighter colors than their companion hens, but not in every breed."</p>
+            <a class="light" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p>Roosters put a lot of merit into their looks, presentation is everything to them. They are incredible performers and picky when it comes to their actions and the way they present themselves. Roosters are also extremely hard-working and tend to make strong leaders.</p>
         </div>
         <div class="cards raven">
             <h1 class="card-header">Raven</h1>
+            <audio id="raven-audio">
+                <source src="./Content/Raven-sound.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
             <img class="esc-btn hover" src="./Content/close-button.png" alt="close button">
             <img src="./Content/raven-img.jpg" class="bird-img">
-            <p>"Ravens are extremely intelligent and will follow humans and eat their scraps for leftovers."</p>
-            <a href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
+            <p class="card-quote">"Ravens are extremely intelligent and will follow humans and eat their scraps for leftovers."</p>
+            <a class="light" href="https://a-z-animals.com/blog/12-birth-month-birds-heres-what-your-bird-symbolizes/"><p>a-z-animals.com</p></a>
             <p>Ravens are fierce individuals that like to keep a tight circle of one to two others around them. They are confident and inquisitive about the world around them. They are fiercly devoted to their family and partners, even when it becomes quarrelsome- which is quite often.</p>
         </div>
     </main>

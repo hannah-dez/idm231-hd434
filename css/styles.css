@@ -1,18 +1,58 @@
+@font-face {
+    font-family: headerFont;
+    src: url(../Content/GravitasOne-Regular.ttf);
+  }
+@font-face {
+    font-family: mainFont;
+    src: url(../Content/Outfit-VariableFont_wght.ttf);
+}
+
 body{
     background-color: paleturquoise;
 }
 p {
     font-size:1rem;
+    font-family: mainFont;
+    text-align: left;
 }
 
-h1{
-    font-size:3rem;
-    font-weight: bold;
+.card-quote{
+    font-weight: 600;
+    text-align: center;
 }
+
+
+.heading {
+    display: flex;
+    justify-content: space-between; /* Align items with space in between */
+    align-items: center; /* Center items vertically */
+    max-width: 100vw;
+    margin: auto;
+    padding: 20px; /* Add padding for spacing */
+  }
+  
+  button.help-btn {
+    width: auto;
+    height: 10vw;
+  }
+  
+  h1 {
+    text-align: center; /* Center the heading text */
+    flex-grow: 1; /* Allow the heading to grow and occupy remaining space */
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
 
 button{
     background-color: transparent;
     border: 0px;
+}
+
+#submitbtn{
+    background-color:rgb(171, 127, 89);
+    border-radius: 25px;
+    padding: 8px;
 }
 
 .heading{
@@ -20,6 +60,7 @@ button{
     margin: 0 auto;
     display: flex;
     justify-content: center;
+    font-family: headerFont;
 }
 
 .input{
@@ -27,10 +68,12 @@ button{
     z-index: 2;
     position:relative;
     top:-920px;
-    background-color: rgb(141, 128, 111);
+    background-color: rgb(88, 69, 44);
     max-width: fit-content;
     margin: auto;
     border-radius: 15px;
+    padding: 15px;
+    color: rgb(243, 168, 103);
 }
 
 .input-content{
@@ -125,6 +168,7 @@ button{
     display: flex;
     justify-content: center;
     margin: 0;
+    font-family: sans-serif;
 }
 .esc-btn{
     width: 2vw;
@@ -156,6 +200,18 @@ button{
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%); 
+}
+
+.cards .dark{
+    color: black;
+    display: block;
+    text-align: center;
+}
+
+.cards .light{
+    color: blanchedalmond;
+    display: block;
+    text-align: center;
 }
 
 .parrot{

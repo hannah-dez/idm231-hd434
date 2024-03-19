@@ -6,78 +6,62 @@ eggHovers.forEach(eggHover => {
 
 //button open/ closes a display, question mark is a pop up 
 
-//birthday input? why doesnt it work
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.querySelector('.input');
-    const birthdayInput = document.getElementById('birthday-input');
-    const submitBtn = document.getElementById('submit-btn');
-    const cardContainer = document.querySelector('.card-container');
 
-    function displayCard(cardId) {
-        const cards = document.querySelectorAll('.card');
-        cards.forEach(card => {
-            if (card.id === cardId) {
-                card.style.display = 'block';
-            } else {
-                card.style.display = 'none';
-            }
-        });
+//birthday input
+function handle_submit(event) {
+  event.preventDefault();
+  const birthdayInput = document.getElementById('birthdayInput');
+  const birthdayValue = birthdayInput.value;
+  console.log('Birthday inputted:', birthdayValue);
+  
+  const date = new Date(birthdayValue);
+  const month = date.getMonth() + 1; 
+  const day = date.getDate();
+  
+  const divs = [
+    { class: '.owl', startMonth: 1, startDay: 20, endMonth: 2, endDay: 18 }, //good
+    { class: '.parrot', startMonth: 2, startDay: 19, endMonth: 3, endDay: 20 }, //good
+    { class: '.robin', startMonth: 3, startDay: 21, endMonth: 4, endDay: 19 }, //good
+    { class: '.warbler', startMonth: 4, startDay: 20, endMonth: 5, endDay: 20 }, //good
+    { class: '.nightingale', startMonth: 5, startDay: 21, endMonth: 6, endDay: 20 }, //good
+    { class: '.dove', startMonth: 6, startDay: 21, endMonth: 7, endDay: 22 }, //good
+    { class: '.eagle', startMonth: 7, startDay: 23, endMonth: 8, endDay: 22 }, //good
+    { class: '.kingfisher', startMonth: 8, startDay: 23, endMonth: 9, endDay: 22 }, //good
+    { class: '.hawk', startMonth: 9, startDay: 23, endMonth: 10, endDay: 22 }, //good
+    { class: '.swan', startMonth: 10, startDay: 23, endMonth: 11, endDay: 21 }, //good
+    { class: '.rooster', startMonth: 11, startDay: 22, endMonth: 12, endDay: 21 }, //good
+    { class: '.raven', startMonth: 12, startDay: 22, endMonth: 1, endDay: 19 } //good
+  ];
+
+  divs.forEach(divInfo => {
+    const { class: divClass, startMonth, startDay, endMonth, endDay } = divInfo;
+    const div = document.querySelector(divClass);
+    const audioElement = div.querySelector('audio'); 
+
+    div.style.display = 'none'; // Hide all cards by default
+
+    if (
+      (month === startMonth && day >= startDay) || 
+      (month === endMonth && day <= endDay) || 
+      (month > startMonth && month < endMonth)
+    ) {
+      div.style.display = 'block'; // Display the card that matches the condition
+
+      if (audioElement) {
+        audioElement.play(); 
+      }
+    } else {
+      if (audioElement) {
+        audioElement.pause(); 
+        audioElement.currentTime = 0;
+      }
     }
-
-    function handle_submit(event) {
-        event.preventDefault();
-
-        const birthdayInputValue = birthdayInput.value;
-        const date = new Date(birthdayInputValue);
-        const month = date.getMonth() + 1; // Adding 1 since getMonth() returns 0-indexed month
-
-        // Example logic for displaying different cards based on date and month
-        if ((month === 3 && date.getDate() >= 21) || (month === 4 && date.getDate() <= 20)) {
-            displayCard('robin-card'); // Display the robin card
-        } else if ((month === 5 && date.getDate() >= 21) || (month === 6 && date.getDate() <= 20)) {
-            displayCard('dove-card'); // Display the dove card
-        } else if ((month === 7 && date.getDate() >= 23) || (month === 8 && date.getDate() <= 22)) {
-            displayCard('eagle-card'); // Display the eagle card
-        } else {
-            // Display a default card if no specific conditions are met
-            displayCard('default-card'); // Replace 'default-card' with the id of your default card
-        }
-    }
-
-    form.addEventListener('submit', handle_submit);
-});
-
-const form= document.querySelector('form');
-function log_birthday(birthday) {
-    const date = {
-      year: birthday[0],
-      month: birthday[1],
-      day: birthday[2],
-    };
-    return date;
-  }
-function handle_submit(event){
-    event.preventDefault();
-    console.log('it works');
-    console.log(form);
-    console.log(form.elements);
-    console.log(form.elements['name'].value);
-    console.log(form.elements['birthday'].value);
-    console.groupEnd();
-
-    const nameInputValue=form.elements['name'].value;
-    const birthdayInputValue=form.elements['birthday'].value;
-    console.log(nameInputValue);
-    console.log(birthdayInputValue);//2023-02-20
-    const date = birthdayInputValue.split("-");
-    const year= date[0];
-    const day = date[2];
-    const month = date [1];
-    console.assertlog('Year:', year, 'Month', month, 'Day', day);
+  });
 }
 
 
-form.addEventListener('submit', handle_submit)
+const form = document.querySelector('.input');
+form.addEventListener('submit', handle_submit);
 
 
 //open bird cards on click
