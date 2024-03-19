@@ -14,11 +14,13 @@ p {
     font-size:1rem;
     font-family: mainFont;
     text-align: left;
+    text-indent: 10px;
 }
 
 .card-quote{
     font-weight: 600;
     text-align: center;
+    text-indent: 0;
 }
 
 
@@ -34,6 +36,7 @@ p {
   button.help-btn {
     width: auto;
     height: 10vw;
+    margin-top: -50px;
   }
   
   h1 {
@@ -43,7 +46,6 @@ p {
     font-weight: bold;
   }
   
-
 button{
     background-color: transparent;
     border: 0px;
@@ -202,16 +204,14 @@ button{
     transform: translate(-50%, -50%); 
 }
 
-.cards .dark{
-    color: black;
-    display: block;
-    text-align: center;
-}
-
-.cards .light{
-    color: blanchedalmond;
-    display: block;
-    text-align: center;
+.cards a{
+    color: rgb(47, 137, 255); /* Set text color */
+  display: flex;
+  font-size: 0.8rem; /* Set font size */
+  margin:0;
+  justify-content: center; /* Center horizontally */
+  background-color: antiquewhite;
+  border-radius: 20px;
 }
 
 .parrot{
