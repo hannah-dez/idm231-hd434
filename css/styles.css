@@ -254,7 +254,7 @@ button{
     width: 25vw;
     height: fit-content;
     margin: 10px auto;
-    padding:15px;
+    padding:30px;
     border-radius: 25px;
     z-index: 999; 
     position: fixed; 
