@@ -16,13 +16,24 @@ p {
     text-align: left;
     text-indent: 10px;
 }
+  
+h1 {
+    text-align: center; /* Center the heading text */
+    flex-grow: 1; /* Allow the heading to grow and occupy remaining space */
+    font-size: 3rem;
+    font-weight: bold;
+  }
+  
+button{
+    background-color: transparent;
+    border: 0px;
+}
 
 .card-quote{
     font-weight: 600;
     text-align: center;
     text-indent: 0;
 }
-
 
 .heading {
     display: flex;
@@ -38,18 +49,6 @@ p {
     height: 10vw;
     margin-top: -50px;
   }
-  
-  h1 {
-    text-align: center; /* Center the heading text */
-    flex-grow: 1; /* Allow the heading to grow and occupy remaining space */
-    font-size: 3rem;
-    font-weight: bold;
-  }
-  
-button{
-    background-color: transparent;
-    border: 0px;
-}
  
 .help-popup{
     background-color: aliceblue;
@@ -127,6 +126,11 @@ button{
 .input-content{
     padding: 15px 15px;
 }
+
+.submit{
+    margin:5px;
+}
+
 .grid-container{
     z-index:1;
     position: relative;
@@ -181,10 +185,6 @@ button{
     justify-self: self-end;
 }
 
-.submit{
-    margin:5px;
-}
-
 .branch{
     z-index: 0;
     position:relative;
@@ -232,26 +232,9 @@ button{
     display: flex;
     border-radius: 15px;
 }
-.cards{
-    display: none;
-}
-.owl{
-    background-color:cadetblue;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
-    color: rgb(252, 245, 233);
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%); 
-}
 
 .cards a{
-    color: rgb(47, 137, 255); /* Set text color */
+  color: rgb(47, 137, 255); /* Set text color */
   display: flex;
   font-size: 0.8rem; /* Set font size */
   margin:0;
@@ -260,8 +243,8 @@ button{
   border-radius: 20px;
 }
 
-.parrot{
-    background-color:coral;
+.cards{
+    display: none;
     width: 25vw;
     height: fit-content;
     margin: 10px auto;
@@ -272,148 +255,56 @@ button{
     top: 50%; 
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.owl{
+    background-color:cadetblue;
+    color: rgb(252, 245, 233); 
+}
+
+.parrot{
+    background-color:coral;
 }
 
 .robin{
     background-color:lightblue;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .warbler{
     background-color:yellowgreen;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .nightingale{
     background-color:cornflowerblue;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .dove{
     background-color:gainsboro;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .eagle{
     background-color:gold;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .kingfisher{
     background-color:aquamarine;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .hawk{
     background-color:burlywood;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .swan{
     background-color:pink;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .rooster{
     background-color:firebrick;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
     color:blanchedalmond;
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 .raven{
     background-color:darkblue;
-    width: 25vw;
-    height: fit-content;
-    margin: 10px auto;
-    padding:15px;
-    border-radius: 25px;
     color:blanchedalmond;
-    z-index: 999; 
-    position: fixed; 
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
 p.raven{

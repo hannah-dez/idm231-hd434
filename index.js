@@ -4,18 +4,18 @@ const eggHovers = document.querySelectorAll('.hover')
 eggHovers.forEach(eggHover => {
 });
 
-//button open/ closes a display, question mark is a pop up 
+// help button open/ closes a display, question mark is a pop up 
 document.addEventListener("DOMContentLoaded", function() {
   const helpBtn = document.querySelector('.help-btn');
   const helpPopup = document.querySelector('.help-popup');
   const closeBtn = document.querySelector('.esc-btn');
 
   helpBtn.addEventListener('click', function() {
-    helpPopup.style.display = 'block'; // Show the help popup
+    helpPopup.style.display = 'block'; 
   });
 
   closeBtn.addEventListener('click', function() {
-    helpPopup.style.display = 'none'; // Hide the help popup
+    helpPopup.style.display = 'none'; 
   });
 });
 
@@ -59,7 +59,7 @@ function handle_submit(event) {
       (month === endMonth && day <= endDay) || 
       (month > startMonth && month < endMonth)
     ) {
-      div.style.display = 'block'; // Display the card that matches the condition
+      div.style.display = 'block'; 
 
       if (audioElement) {
         audioElement.play(); 
@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function() {
       audio.play();
     });
   });
-
+// make esc button work
   const escButtons = document.querySelectorAll('.esc-btn');
   function hideCards() {
     document.querySelectorAll('.cards').forEach(card => {
