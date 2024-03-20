@@ -50,6 +50,52 @@ button{
     background-color: transparent;
     border: 0px;
 }
+ 
+.help-popup{
+    background-color: aliceblue;
+    width: 25vw;
+    padding: 25px;
+    height: fit-content;
+    margin: 10px auto;
+    border-radius: 25px;
+    z-index: 900;
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    display: none;
+}
+.nest{
+    width: 15vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+
+#call2action{
+    font-family: mainFont;
+    font-weight: 600;
+    width: 20vw;
+}
+
+.help-popup p{
+    width: 25vw;
+    text-indent: 0;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.help-header{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.help-content{
+    margin-top: 50px;
+}
 
 #submitbtn{
     background-color:rgb(171, 127, 89);

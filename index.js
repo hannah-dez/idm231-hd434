@@ -5,7 +5,19 @@ eggHovers.forEach(eggHover => {
 });
 
 //button open/ closes a display, question mark is a pop up 
+document.addEventListener("DOMContentLoaded", function() {
+  const helpBtn = document.querySelector('.help-btn');
+  const helpPopup = document.querySelector('.help-popup');
+  const closeBtn = document.querySelector('.esc-btn');
 
+  helpBtn.addEventListener('click', function() {
+    helpPopup.style.display = 'block'; // Show the help popup
+  });
+
+  closeBtn.addEventListener('click', function() {
+    helpPopup.style.display = 'none'; // Hide the help popup
+  });
+});
 
 //birthday input
 function handle_submit(event) {
@@ -33,12 +45,14 @@ function handle_submit(event) {
     { class: '.raven', startMonth: 12, startDay: 22, endMonth: 1, endDay: 19 } //good
   ];
 
+  document.querySelectorAll('.cards').forEach(card => {
+    card.style.display = 'none';
+  });
+
   divs.forEach(divInfo => {
     const { class: divClass, startMonth, startDay, endMonth, endDay } = divInfo;
     const div = document.querySelector(divClass);
     const audioElement = div.querySelector('audio'); 
-
-    div.style.display = 'none'; // Hide all cards by default
 
     if (
       (month === startMonth && day >= startDay) || 
@@ -58,7 +72,6 @@ function handle_submit(event) {
     }
   });
 }
-
 
 const form = document.querySelector('.input');
 form.addEventListener('submit', handle_submit);
@@ -87,6 +100,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const audio = document.getElementById(card.audioId);
 
     button.addEventListener("click", function() {
+      document.querySelectorAll('.cards').forEach(c => {
+        if (c !== cardElement && c.style.display === 'block') {
+          c.style.display = 'none';
+          const audio = c.querySelector('audio');
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      });
+
       if (cardElement.style.display === 'none' || cardElement.style.display === '') {
         cardElement.style.display = 'block';
         audio.play();
@@ -105,10 +127,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   const escButtons = document.querySelectorAll('.esc-btn');
   function hideCards() {
-    cards.forEach(card => {
-      const cardElement = document.querySelector(card.cardClass);
-      cardElement.style.display = 'none';
-      const audio = document.getElementById(card.audioId);
+    document.querySelectorAll('.cards').forEach(card => {
+      card.style.display = 'none';
+      const audio = card.querySelector('audio');
       audio.pause();
       audio.currentTime = 0;
     });
