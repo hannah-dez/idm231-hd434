@@ -226,6 +226,12 @@ button{
     top: 20px;
     left: 20px;
 }
+
+.esc-btn.lighter{
+    background-color: bisque;
+    border-radius: 7px;
+}
+
 .bird-img{
     max-width: 15vw;
     margin: auto;

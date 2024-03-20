@@ -5,13 +5,18 @@ eggHovers.forEach(eggHover => {
 });
 
 // help button open/ closes a display, question mark is a pop up 
+
 document.addEventListener("DOMContentLoaded", function() {
   const helpBtn = document.querySelector('.help-btn');
   const helpPopup = document.querySelector('.help-popup');
   const closeBtn = document.querySelector('.esc-btn');
 
   helpBtn.addEventListener('click', function() {
-    helpPopup.style.display = 'block'; 
+    if (helpPopup.style.display === 'block') {
+      helpPopup.style.display = 'none';
+    } else {
+      helpPopup.style.display = 'block';
+    }
   });
 
   closeBtn.addEventListener('click', function() {
